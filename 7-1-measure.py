@@ -38,6 +38,7 @@ try:
      GPIO.output(leds,decimal2binary (value))
      pend=time.time()
     znach.append(207) 
+    print("value=",207,'signal=',decimal2binary (207),'V=',3.3/2**8*207)
     GPIO.output(troyka,0)
     while(adc()>168):
      value=adc()  
@@ -46,6 +47,7 @@ try:
      print("value=",value,'signal=',decimal2binary (value),'V=',voltage)
      GPIO.output(leds,decimal2binary (value))
     znach.append(168)
+    print("value=",168,'signal=',decimal2binary (168),'V=',3.3/2**8*168)
     endt=time.time()
     vsetime=endt-startt
     print ('time=',endt-startt, "с")
